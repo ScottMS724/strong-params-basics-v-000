@@ -25,6 +25,10 @@ end
 
 private
 
+def post_params
+  params.require(:post).permit(:title, :description)
+end
+
 	def edit
 	  @post = Post.find(params[:id])
 	end
